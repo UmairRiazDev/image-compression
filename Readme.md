@@ -4,7 +4,7 @@ This application written using Java 9 and JavaFX
 
 Current status: initial release **Version 1.0**
 
-First version offers:
+First version:
 - Load image:+1:
 - Preview decoded image:+1:
 - Save in the same directory from where image is loaded, as well as save to custom location.:+1:
