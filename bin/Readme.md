@@ -1,4 +1,4 @@
-Exe file will alocate 90% free memory for the larger sized images.
+Exe file will allocate 90% of available memory for the encoding/decoding process.
 
 For jar you can set memory from command-line.
 
