@@ -12,5 +12,7 @@ First version:
 - Implemented Huffman & Haarwavelet algorithms.:+1:
 - Chose license.:+1:
 
+![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/screenshot.png) 
+
 Requirements:
 You must have JRE 9.x.x installed to run the application
