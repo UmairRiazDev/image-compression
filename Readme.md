@@ -1,6 +1,6 @@
 ## Image Compression using Huffman and Haarwavelet algorithms
 
-This application built using JavaFX and written in Java
+This application written using Java 9 and JavaFX
 
 Current status: initial release **Version 1.0**.
 
