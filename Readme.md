@@ -16,8 +16,7 @@ Format Supported:
 - PNG (Lossless)
 
 
-![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/img-compression.gif) 
-
+<img src="https://github.com/umairreaz/image-compression/blob/master/bin/img-compression.gif" width="1016" height="404" border="10" />
 
 Requirements:
 You must have JRE 9.x.x installed to run the application
