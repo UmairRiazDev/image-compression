@@ -15,7 +15,9 @@ First version:
 Format Supported:
 - PNG (Lossless)
 
-![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/screenshot.png) 
+
+![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/img-compression.gif) 
+
 
 Requirements:
 You must have JRE 9.x.x installed to run the application
