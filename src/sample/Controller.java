@@ -236,37 +236,58 @@ public class Controller implements Initializable{
 
                 if (source_path != null) {
                     if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Encode")) {
-                        new MainAlgorithm(original_path, getOutputPath().toString(), "encoding");
-                        setImageFromFile(modified, getOutputPath());
-                        messages.setText(".out file generated!");
+                        messages.setText("Encoding Process Started... Please Wait!");
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                new MainAlgorithm(original_path, getOutputPath().toString(), "encoding");
+                                setImageFromFile(modified, getOutputPath());
+                                messages.setText(".out file generated!");
+                            }
+                        }).start();
+
                     } else if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Decode")) {
-                        if (!getOutputPath(".out", false).exists()) {
-                            new MainAlgorithm(original_path, getOutputPath(".out", false).toString(), "encoding");
-                        }
-                        new MainAlgorithm(getOutputPath(".out", false).toString(), getOutputPath("", true).toString());
-                        messages.setText(".png saved");
-                        setImageFromFile(modified, getOutputPath(".png", true));
+                        messages.setText("Decoding Process Started... Please Wait!");
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (!getOutputPath(".out", false).exists()) {
+                                    new MainAlgorithm(original_path, getOutputPath(".out", false).toString(), "encoding");
+                                }
+                                new MainAlgorithm(getOutputPath(".out", false).toString(), getOutputPath("", true).toString());
+                                messages.setText(".png saved");
+                                setImageFromFile(modified, getOutputPath(".png", true));
+                            }
+                        }).start();
+
                     }
                 }
                 if (custom_path != null) {
-                    if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Encode")) {
-                        new MainAlgorithm(original_path, custom_path.toString(), "encoding");
-                        setImageFromFile(modified, custom_path);
-                        messages.setText(".out file generated!");
-                    } else if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Decode")) {
-                        if (!new File(custom_path.toString().replace("Decode.png", "Encode.out")).exists()) {
-                            new MainAlgorithm(original_path, custom_path.toString().replace(".png", ".out"), "encoding");
+                    final File file = custom_path;
+                    messages.setText("Process Started... Please Wait!");
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Encode")) {
+                                new MainAlgorithm(original_path, file.toString(), "encoding");
+                                setImageFromFile(modified, file);
+                                messages.setText(".out file generated!");
+                            } else if (algorithms.getSelectionModel().getSelectedItems().get(0).equals("Decode")) {
+                                if (!new File(file.toString().replace("Decode.png", "Encode.out")).exists()) {
+                                    new MainAlgorithm(original_path, file.toString().replace(".png", ".out"), "encoding");
+                                }
+                                new MainAlgorithm(file.toString().replace("Decode.png", "Encode.out"), file.toString().replace(".png",""));
+                                messages.setText(".png saved");
+                                setImageFromFile(modified, file);
+                            }
                         }
-                        new MainAlgorithm(custom_path.toString().replace("Decode.png", "Encode.out"), custom_path.toString().replace(".png",""));
-                        messages.setText(".png saved");
-                        setImageFromFile(modified, custom_path);
-                    }
+                    }).start();
+
                 }
 
 
             }
             else messages.setText("No image to save");
-            
         });
     }
 
@@ -298,8 +319,8 @@ public class Controller implements Initializable{
             alert.setTitle("About");
             alert.setHeaderText(null);
             String info = "Version: 1.0"
-            		+ "\n\n\nLicense: MIT License"
-            		+ "\n\n\nCopyright© 2017-2018"
+            		+ "\n\nLicense: MIT License"
+            		+ "\n\nCopyright© 2017-2018"
             		+ "\nhttps://github.com/umairreaz/image-compression"
             		+ "\nhttps://github.com/SeverMateus/haarHuffman";
             alert.setContentText(info);
