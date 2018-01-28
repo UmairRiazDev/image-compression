@@ -2,7 +2,7 @@
 
 This application written using Java 9 and JavaFX
 
-Current status: initial release **Version 1.0**.
+Current status: initial release **Version 1.0**
 
 This is the first version of the application which has basic functionality:
 - Load image:+1:
