@@ -1,4 +1,4 @@
-## Image Compression using Huffman and Haarwavelet algorithms
+## Loseless Image Compression using Huffman and Haarwavelet algorithms
 
 This application written using Java 9 and JavaFX
 
@@ -11,6 +11,9 @@ First version:
 - About dialogbox for information:+1:
 - Implemented Huffman & Haarwavelet algorithms.:+1:
 - Chose license.:+1:
+
+Format Supported:
+- PNG (Lossless)
 
 ![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/screenshot.png) 
 
