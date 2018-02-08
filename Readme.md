@@ -2,7 +2,7 @@
 
 This application written using Java 9 and JavaFX
 
-Current status: initial release **Version 1.0**
+Current status: initial release **Version 1.1**
 
 First version:
 - Load image:+1:
@@ -15,6 +15,14 @@ First version:
 Format Supported:
 - PNG (Lossless)
 
+
+Changelog:
+Version 1.1:
+- Now transformation done using integers
+- Encoded file compression is now better (After Gzip applied)
+
+Version 1.0:
+- Initial release
 
 ![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/img-compression.gif)
 
