@@ -19,7 +19,7 @@ Format Supported:
 Changelog:
 Version 1.1:
 - Now transformation done using integers
-- Encoded file compression is now better (After Gzip applied)
+- Encoded file compression is now better (Gzip being used to compress)
 
 Version 1.0:
 - Initial release
