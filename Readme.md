@@ -2,7 +2,7 @@
 
 This application written using Java 9 and JavaFX
 
-Current status: initial release **Version 1.1**
+Current status: **Version 1.1**
 
 First version:
 - Load image:+1:
@@ -23,6 +23,8 @@ Version 1.1:
 
 Version 1.0:
 - Initial release
+
+
 
 ![screenshot](https://github.com/umairreaz/image-compression/blob/master/bin/img-compression.gif)
 
