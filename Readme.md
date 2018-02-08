@@ -10,7 +10,7 @@ First version:
 - Save in the same directory from where image is loaded, as well as save to custom location.:+1:
 - About dialogbox for information:+1:
 - Implemented Huffman & Haarwavelet algorithms.:+1:
-- Chose license.:+1:
+- Used MIT license.:+1:
 
 Format Supported:
 - PNG (Lossless)
